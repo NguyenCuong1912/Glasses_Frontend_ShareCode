@@ -11,11 +11,11 @@ export default function HomeTemplate(props) {
     })
     return <Route {...restRoute} render={(propsRoute) => {
 
-        return <Fragment>
+        return <div className='relative'>
             <Header />
             <Component {...propsRoute} />
             <Footer />
 
-        </Fragment>
+        </div>
     }} />
 }

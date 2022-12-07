@@ -7,7 +7,7 @@ import NavHeader from './NavHeader';
 
 export default function Header() {
     return (
-        <div className='fixed top-0 left-0 right-0 bg-white grid grid-cols-7 py-4 border-b shadow-lg drop-shadow-2xl'>
+        <div className='fixed top-0 left-0 right-0 z-50 bg-white grid grid-cols-7 py-4 shadow-lg drop-shadow-2xl'>
             <div className='col-start-2 '>
                 <img src={_logo} alt='ANNA' />
             </div>
