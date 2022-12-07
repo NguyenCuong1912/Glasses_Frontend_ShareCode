@@ -1,7 +1,9 @@
 import React, { Fragment } from 'react'
 import HomeSlick from '../../../components/Client/HomeSlick/HomeSlick'
+import Product from '../../../components/Client/Product/Product';
 import Slick from '../../../components/Client/Product/Slick'
-import { _product1 } from '../../../utils/util/ImagePath'
+import { _bg, _product1 } from '../../../utils/util/ImagePath'
+import ProductSlick from './../../../components/Client/Product/ProductSlick';
 
 export default function Home() {
     return (
@@ -23,6 +25,44 @@ export default function Home() {
                         </div>
                         <div className='mx-6'>
                             <Slick />
+                        </div>
+                    </div>
+
+                    <div className='my-20'>
+                        <ProductSlick />
+                    </div>
+                </div>
+            </div>
+            <div style={{ backgroundImage: `url(${_bg})`, backgroundRepeat: 'no-repeat' }}>
+                <div className='grid grid-cols-7'>
+                    <div className='col-start-2 col-span-5'>
+                        <div className='mt-28 mb-16'>
+                            <div className='uppercase text-white'>
+                                Hot Trend
+                            </div>
+                            <div className='text-4xl font-bold uppercase text-white'>
+                                Hàng mới lên kệ
+                            </div>
+                        </div>
+                        <div className='flex flex-wrap'>
+                            <div className='w-1/5'>
+                                <Product />
+                            </div>
+                            <div className='w-1/5'>
+                                <Product />
+                            </div>
+                            <div className='w-1/5'>
+                                <Product />
+                            </div>
+                            <div className='w-1/5'>
+                                <Product />
+                            </div>
+                            <div className='w-1/5'>
+                                <Product />
+                            </div>
+                            <div className='w-1/5'>
+                                <Product />
+                            </div>
                         </div>
                     </div>
                 </div>
