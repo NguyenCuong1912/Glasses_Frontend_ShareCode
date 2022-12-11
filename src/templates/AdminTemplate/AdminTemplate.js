@@ -3,13 +3,13 @@ import React, { Fragment, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { USER_LOGIN } from '../../redux/Types/QuanLyUserType';
 import { Redirect, Route } from 'react-router';
-import { _account, _admin, _bill, _home, _login, _product } from '../../utils/util/ConfigPath';
+import { _account, _admin, _bill, _cate, _home, _login, _product } from '../../utils/util/ConfigPath';
 import { NavLink } from 'react-router-dom';
 import { history } from '../../App';
 import { _logo } from '../../utils/util/ImagePath';
 import { UserOutlined } from '@ant-design/icons';
-import { FcShop } from 'react-icons/fc';
-import { BsCardText } from 'react-icons/bs';
+import { BiGlassesAlt } from "react-icons/bi";
+import { BsCardText, BsSunglasses } from 'react-icons/bs';
 import _ from 'lodash'
 
 
@@ -60,9 +60,11 @@ export default function AdminTemplate(props) {
                         <Menu.Item key='1' icon={<UserOutlined style={{ fontSize: 20 }} />}>
                             <NavLink className='text-black' to={`${_admin}${_account}`} >Accounts</NavLink>
                         </Menu.Item>
-
-                        <Menu.Item key='3' icon={<FcShop style={{ fontSize: 20 }} />}>
-                            <NavLink className='text-black' to={`${_admin}${_product}`}>Clothes</NavLink>
+                        <Menu.Item key='2' icon={<BiGlassesAlt style={{ fontSize: 25 }} />}>
+                            <NavLink className='text-black' to={`${_admin}${_cate}`} >Category</NavLink>
+                        </Menu.Item>
+                        <Menu.Item key='3' icon={<BsSunglasses style={{ fontSize: 25 }} />}>
+                            <NavLink className='text-black' to={`${_admin}${_product}`}>Glasses</NavLink>
                         </Menu.Item>
                         <Menu.Item key='4' icon={<BsCardText style={{ fontSize: 20 }} />} >
                             <NavLink className='text-black' to={`${_admin}${_bill}`}>Bill</NavLink>

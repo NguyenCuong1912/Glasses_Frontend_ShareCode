@@ -11,6 +11,7 @@ import { Dropdown, Menu, Space } from 'antd';
 import { history } from '../../../App';
 import {
     _account,
+    _cart,
     _home,
     _login,
     _order,
@@ -27,8 +28,12 @@ export default function Header() {
 
     const { userLogin } = useSelector(state => state.QuanLyUserReducer);
 
-    console.log('a', userLogin)
+    const { cart } = useSelector(state => state.QuanLyCartReducer);
 
+    let number = 0;
+    cart?.forEach(element => {
+        number += element.Quantity
+    });
 
     const user = (
         <Menu
@@ -129,8 +134,9 @@ export default function Header() {
                 </NavLink>
 
                 {operations}
-                <NavLink to='' className='text-black hover:text-teal-500'>
+                <NavLink to={_cart} className='text-black flex hover:text-teal-500'>
                     <BsHandbag />
+                    <span className='text-base text-red-500 -mt-1'>({number})</span>
                 </NavLink>
             </div>
         </div>

@@ -7,7 +7,7 @@ import {
     _home,
     _login
 } from "../../utils/util/ConfigPath";
-import { GET_ALL_USER, GET_DETAIL, SET_LOGIN } from './../Types/QuanLyUserType';
+import { GET_ALL_USER, GET_DETAIL, SET_LOGIN, USER_LOGIN } from './../Types/QuanLyUserType';
 
 
 
@@ -143,7 +143,9 @@ export const UpdateAccountAction = (id, data) => {
 
                 await message.success("Cập nhật tài khoản thành công!")
                 alert('Bạn cần đăng nhập lại!')
-                history.push(`${_login}`)
+                sessionStorage.removeItem(USER_LOGIN);
+                history.push(`${_login}`);
+                window.location.reload();
             }
             else {
                 message.error("Cập nhật tài khoản thất bại!")

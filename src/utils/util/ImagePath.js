@@ -2,6 +2,7 @@
 
 export const _logo = '../img/logo-anna.png'
 export const _logo2 = '../img/logo-footer.png'
+export const _accountLogo = '../img/account.png'
 export const _logoSale = '../img/logoSaleNoti.png'
 
 

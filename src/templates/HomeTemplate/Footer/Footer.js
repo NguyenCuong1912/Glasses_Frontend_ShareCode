@@ -13,7 +13,7 @@ import { NavLink } from 'react-router-dom';
 export default function Footer() {
     return (
         <Fragment>
-            <div className='grid grid-cols-7' style={{ backgroundColor: '#F8F8F8' }}>
+            <div className='grid grid-cols-7 mt-8' style={{ backgroundColor: '#F8F8F8' }}>
                 <div className='col-start-2 col-span-5'>
                     <div className='grid grid-cols-4'>
                         <div className='py-10'>
