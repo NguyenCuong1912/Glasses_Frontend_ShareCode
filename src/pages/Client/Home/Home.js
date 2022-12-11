@@ -1,9 +1,11 @@
 import React, { Fragment, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
+import { history } from '../../../App';
 import HomeSlick from '../../../components/Client/HomeSlick/HomeSlick'
 import Product from '../../../components/Client/Product/Product';
 import Slick from '../../../components/Client/Product/Slick'
 import { GetAllProductAction } from '../../../redux/Actions/QuanLyProductAction';
+import { _product } from '../../../utils/util/ConfigPath';
 import { _bg, _product1 } from '../../../utils/util/ImagePath'
 import ProductSlick from './../../../components/Client/Product/ProductSlick';
 
@@ -36,7 +38,9 @@ export default function Home() {
                         <div className='relative mr-2'>
                             <img className='rounded-3xl' src={_product1} alt='product1' />
                             <div className='flex justify-center'>
-                                <button className='absolute bottom-10 py-2 px-4 text-white bg-black font-medium uppercase rounded-lg hover:bg-teal-500'>Chọn kính ngay</button>
+                                <button onClick={() => {
+                                    history.push(`${_product}/1`)
+                                }} className='absolute bottom-10 py-2 px-4 text-white bg-black font-medium uppercase rounded-lg hover:bg-teal-500'>Chọn kính ngay</button>
                             </div>
                         </div>
                         <div className='mx-8'>
