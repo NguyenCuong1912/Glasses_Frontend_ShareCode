@@ -19,7 +19,7 @@ export default function AccountTemplate(props) {
 
         return <Fragment>
             <Header />
-            <div className='grid grid-cols-5 my-10 h-screen content-center'>
+            <div className='grid grid-cols-5 my-10 my-48'>
                 <div className='col-start-2 col-span-3 h-full'>
                     <div className='grid grid-cols-4'>
                         <div>

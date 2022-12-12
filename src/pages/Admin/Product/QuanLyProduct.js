@@ -120,11 +120,11 @@ export default function QuanLyProduct() {
         <Fragment>
             <div className='mt-4'>
                 <div className='flex justify-center'>
-                    <h2 className='text-4xl font-bold text-red-500 flex items-center'>Quản lý sản phẩm</h2>
+                    <h2 className='text-4xl font-bold text-teal-500 flex items-center'>Quản lý sản phẩm</h2>
 
                 </div>
                 <div className='my-10 flex justify-between'>
-                    <button type='button' className='border-2 border-red-600 rounded w-24 h-10 text-lg font-bold text-red-500 hover:text-white hover:bg-red-600' onClick={() => {
+                    <button type='button' className='border-2 border-teal-600 rounded w-24 h-10 text-lg font-bold text-teal-500 hover:text-white hover:bg-teal-600' onClick={() => {
                         history.push(`${_admin}${_product}${_add}`)
                     }}>Thêm </button>
                     <div className='w-1/3'>

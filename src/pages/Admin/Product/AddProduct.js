@@ -2,12 +2,12 @@ import { Input, Select } from 'antd';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import React, { Fragment, useEffect, useState } from 'react'
-import { AiOutlineRollback } from 'react-icons/ai'
 import { useDispatch, useSelector } from 'react-redux';
 import { history } from '../../../App'
 import { _admin, _product } from '../../../utils/util/ConfigPath'
 import { AddProductAction } from '../../../redux/Actions/QuanLyProductAction';
 import { GetAllCateAction } from '../../../redux/Actions/QuanLyCategoryAction';
+import { BsBackspace } from 'react-icons/bs';
 
 export default function AddProduct() {
     const { TextArea } = Input;
@@ -89,13 +89,14 @@ export default function AddProduct() {
         <Fragment>
             <div>
                 <div>
-                    <button type='button' title='Trở về trang sản phẩm' className='text-2xl py-2 px-5 border-2 border-red-500 rounded-md text-red-500 hover:bg-red-500 hover:text-white' onClick={() => {
+                    <button type='button' title='Trở về trang sản phẩm' className='text-4xl text-teal-500 hover:text-teal-700' onClick={() => {
                         history.push(`${_admin}${_product}`)
                     }}>
-                        <AiOutlineRollback />
+                        <BsBackspace />
+
                     </button>
                 </div>
-                <h1 className='text-center text-4xl font-bold text-red-500'>Thêm sản phẩm</h1>
+                <h1 className='text-center text-4xl font-bold text-teal-500'>Thêm sản phẩm</h1>
                 <form onSubmit={formik.handleSubmit}>
                     <div className='grid grid-cols-7'>
                         <div className='col-start-2 col-span-2 mr-4'>
@@ -151,7 +152,7 @@ export default function AddProduct() {
 
                     </div>
                     <div className='text-center'>
-                        <button type='submit' className='text-center p-3 border border-red-600 w-36 text-xl font-bold rounded text-red-600 hover:bg-red-600 hover:text-white'>Thêm</button>
+                        <button type='submit' className='text-center p-3 border border-teal-600 w-36 text-xl font-bold rounded text-teal-500 hover:bg-teal-600 hover:text-white'>Thêm</button>
                     </div>
                 </form>
 

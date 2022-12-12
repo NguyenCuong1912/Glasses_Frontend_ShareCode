@@ -58,9 +58,9 @@ export default function QuanLyCategory() {
     return (
         <Fragment>
             <div className='container mt-4'>
-                <h2 className='text-4xl font-bold text-center text-red-500'>Quản lý loại sản phẩm</h2>
+                <h2 className='text-4xl font-bold text-center text-teal-500'>Quản lý loại sản phẩm</h2>
                 <div className='my-10 flex justify-between'>
-                    <button type='button' className='border-2 border-blue-900 rounded w-24 h-10 text-lg font-bold text-red-500 hover:text-white hover:bg-red-600' onClick={() => {
+                    <button type='button' className='border-2 border-teal-700 rounded w-24 h-10 text-lg font-bold text-teal-500 hover:text-white hover:bg-teal-600' onClick={() => {
                         history.push(`${_admin}${_cate}${_add}`)
                     }}>Thêm </button>
                     <div className='w-1/2'>

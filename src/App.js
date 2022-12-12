@@ -2,7 +2,7 @@ import React from 'react'
 import { createBrowserHistory } from 'history';
 import { Router, Switch } from 'react-router';
 import HomeTemplate from './templates/HomeTemplate/HomeTemplate';
-import { _account, _add, _admin, _anna, _bill, _cart, _cate, _detail, _edit, _home, _login, _product, _register } from './utils/util/ConfigPath';
+import { _account, _add, _admin, _anna, _bill, _cart, _cate, _detail, _edit, _home, _login, _order, _product, _register } from './utils/util/ConfigPath';
 import Home from './pages/Client/Home/Home';
 import UserTemplate from './templates/UserTemplate/UserTemplate';
 import Login from './pages/Login/Login';
@@ -26,6 +26,7 @@ import DetailBill from './pages/Admin/Bill/DetailBill';
 import ProductDetail from './pages/Client/Product/ProductDetail';
 import Anna from './pages/Client/Anna/Anna';
 import ProductList from './pages/Client/Product/ProductList';
+import Order from './pages/Client/Account/Order';
 
 
 
@@ -39,6 +40,7 @@ export default function App() {
         <HomeTemplate path={`${_product}/:id`} exact Component={ProductList} />
         <HomeTemplate path={_anna} exact Component={Anna} />
         <HomeTemplate path={_cart} exact Component={Cart} />
+        <HomeTemplate path={`${_order}/:id`} exact Component={Order} />
         <HomeTemplate path={`${_detail}/:id`} exact Component={ProductDetail} />
 
 

@@ -43,7 +43,7 @@ export default function QuanLyAccount() {
             render: (text, user) => {
                 return <Fragment>
                     {user.PhoneNumber === null ? <marquee>
-                        <div className='text-red-500 flex text-base'>
+                        <div className='text-teal-500 flex text-base'>
                             <span>Anna</span>
                             <span className='text-2xl pl-2'><AiFillHeart /></span>
                         </div>
@@ -57,7 +57,7 @@ export default function QuanLyAccount() {
             render: (text, user) => {
                 return <Fragment>
                     {user.Address === null ? <marquee>
-                        <div className='text-red-500 flex text-base'>
+                        <div className='text-teal-500 flex text-base'>
                             <span>Anna</span>
                             <span className='text-2xl pl-2'><AiFillHeart /></span>
                         </div>
@@ -104,10 +104,10 @@ export default function QuanLyAccount() {
         <Fragment>
             <div className='container mt-4'>
                 <div className='flex justify-center'>
-                    <h2 className='text-4xl font-bold text-red-500 flex items-center'><AiOutlineUser className='mx-2' />Quản lý Users</h2>
+                    <h2 className='text-4xl font-bold text-teal-500'>Quản lý Tài khoản</h2>
                 </div>
                 <div className='my-10 flex justify-between'>
-                    <button type='button' className='border-2 border-red-600 rounded w-24 h-10 text-lg font-bold text-red-500 hover:text-white hover:bg-red-600' onClick={() => {
+                    <button type='button' className='border-2 border-teal-600 rounded w-24 h-10 text-lg font-bold text-teal-500 hover:text-white hover:bg-teal-600' onClick={() => {
                         history.push(`${_admin}${_account}${_add}`)
                     }}>Thêm </button>
                     <div className='w-1/2'>

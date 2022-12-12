@@ -64,13 +64,12 @@ export const GetBillDetail = (id) => {
     return async dispatch => {
         try {
             const result = await quanLyCheckoutService.getBillDetail(id);
-            console.log('detail', result)
-            // if (result.status === 200) {
-            //     dispatch({
-            //         type: GET_BILL_DETAIL,
-            //         data: result.data,
-            //     })
-            // }
+            if (result.status === 200) {
+                dispatch({
+                    type: GET_BILL_DETAIL,
+                    data: result.data,
+                })
+            }
         } catch (error) {
             console.log('error', error.response?.data)
             message.warning('Lấy thông tin không thành công!')

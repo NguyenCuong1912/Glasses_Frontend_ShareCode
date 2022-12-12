@@ -1,6 +1,6 @@
 import { Table } from 'antd';
 import React, { Fragment, useEffect } from 'react'
-import { AiOutlineRollback } from 'react-icons/ai';
+import { BsBackspace } from 'react-icons/bs';
 import { useDispatch, useSelector } from 'react-redux';
 import { history } from '../../../App';
 import { GetBillDetail } from '../../../redux/Actions/QuanLyCheckoutAction';
@@ -13,7 +13,7 @@ export default function DetailBill(props) {
 
     const dispatch = useDispatch();
 
-    // const { lstBillDetail } = useSelector(state => state.QuanLyCartReducer);
+    const { lstBillDetail } = useSelector(state => state.QuanLyCartReducer);
 
     const { lstProduct } = useSelector(state => state.QuanLyProductReducer);
 
@@ -104,17 +104,18 @@ export default function DetailBill(props) {
         <Fragment>
             <div className='mt-4'>
                 <div>
-                    <button type='button' title='Trở về trang hóa đơn' className='text-2xl py-2 px-5 border-2 border-red-500 rounded-md text-red-500 hover:bg-red-500 hover:text-white' onClick={() => {
+                    <button type='button' title='Trở về trang hóa đơn' className='text-4xl text-teal-500 hover:text-teal-700' onClick={() => {
                         history.push(`${_admin}${_bill}`)
                     }}>
-                        <AiOutlineRollback />
+                        <BsBackspace />
+
                     </button>
                 </div>
-                <h2 className='text-4xl font-bold text-center text-red-500'>Chi tiết hóa đơn</h2>
+                <h2 className='text-4xl font-bold text-center text-teal-500'>Chi tiết hóa đơn</h2>
                 <div className='my-10 flex justify-end'>
 
                 </div>
-                <Table dataSource='' columns={columns} rowKey='id' />;
+                <Table dataSource={lstBillDetail} columns={columns} rowKey='id' />;
             </div>
         </Fragment>
     )

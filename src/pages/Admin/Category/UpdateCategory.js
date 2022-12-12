@@ -1,11 +1,11 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import React, { Fragment, useEffect } from 'react'
-import { AiOutlineRollback } from 'react-icons/ai'
 import { useDispatch, useSelector } from 'react-redux';
 import { history } from '../../../App'
 import { GetDetailCateAction, UpdateCateAction } from '../../../redux/Actions/QuanLyCategoryAction';
 import { _admin, _cate } from '../../../utils/util/ConfigPath'
+import { BsBackspace } from 'react-icons/bs';
 
 export default function UpdateCategory(props) {
     let { id } = props.match.params;
@@ -33,14 +33,15 @@ export default function UpdateCategory(props) {
         <Fragment>
             <div className='grid grid-cols-7'>
                 <div>
-                    <button type='button' title='Trở về trang loại sản phẩm' className='text-2xl py-2 px-5 border-2 border-red-500 rounded-md text-red-500 hover:bg-red-500 hover:text-white' onClick={() => {
+                    <button type='button' title='Trở về trang loại sản phẩm' className='text-4xl text-teal-500 hover:text-teal-700' onClick={() => {
                         history.push(`${_admin}${_cate}`)
                     }}>
-                        <AiOutlineRollback />
+                        <BsBackspace />
+
                     </button>
                 </div>
                 <div className='col-span-3 col-start-3 mt-32 h-72 rounded-lg shadow-2xl bg-white p-4'>
-                    <h1 className='text-center text-4xl font-bold text-red-500'>Cập nhật loại sản phẩm</h1>
+                    <h1 className='text-center text-4xl font-bold text-teal-500'>Cập nhật loại sản phẩm</h1>
                     <div className='p-4'>
                         <form onSubmit={formik.handleSubmit}>
                             <input type="text" name='CategoryName' onChange={formik.handleChange} value={formik.values.CategoryName} className='p-3 border-gray border rounded-lg focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500 w-full' placeholder="Tên loại sản phẩm..." />
@@ -48,7 +49,7 @@ export default function UpdateCategory(props) {
                                 <p className='m-0 mt-1 text-red-600'>{formik.errors.CategoryName}</p>
                             )}
                             <div className='text-end mt-16'>
-                                <button type='submit' className='border-2 border-blue-900 rounded w-24 h-10 text-lg font-bold text-red-500 hover:text-white hover:bg-red-900' >Cập nhật</button>
+                                <button type='submit' className='border-2 border-teal-700 rounded w-24 h-10 text-lg font-bold text-teal-500 hover:text-white hover:bg-teal-500' >Cập nhật</button>
                             </div>
                         </form>
                     </div>

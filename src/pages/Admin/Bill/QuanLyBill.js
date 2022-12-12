@@ -41,7 +41,7 @@ export default function QuanLyBill() {
                     {cart.Account.PhoneNumber === null ? <marquee>
                         <div className='flex text-base'>
                             <span className='text-green-500'>Anna</span>
-                            <span className='text-2xl pl-2 text-red-500'><AiFillHeart /></span>
+                            <span className='text-2xl pl-2 text-teal-500'><AiFillHeart /></span>
                         </div>
                     </marquee> : <span>{cart.Account.PhoneNumber}</span>}
                 </span>
@@ -56,7 +56,7 @@ export default function QuanLyBill() {
                     {cart.Account.Address === null ? <marquee>
                         <div className='flex text-base'>
                             <span className='text-green-500'>Anna</span>
-                            <span className='text-2xl pl-2 text-red-500'><AiFillHeart /></span>
+                            <span className='text-2xl pl-2 text-teal-500'><AiFillHeart /></span>
                         </div>
                     </marquee> : <span>{cart.Account.Address}</span>}
                 </span>
@@ -103,7 +103,7 @@ export default function QuanLyBill() {
         <Fragment>
             <div className='container mt-4'>
                 <div className='flex justify-center'>
-                    <h2 className='text-4xl font-bold text-red-500 flex items-center'>Quản lý hóa đơn</h2>
+                    <h2 className='text-4xl font-bold text-teal-500 flex items-center'>Quản lý hóa đơn</h2>
                 </div>
                 <div className='my-10 flex justify-end'>
                     <div className='w-1/3'>
