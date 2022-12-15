@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route } from 'react-router';
-import { useEffect, Fragment } from 'react';
+import { useEffect } from 'react';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 

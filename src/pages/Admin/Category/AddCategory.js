@@ -37,7 +37,7 @@ export default function AddCategory() {
                     <h1 className='text-center text-4xl font-bold text-teal-500'>Thêm loại sản phẩm</h1>
                     <div className='p-4'>
                         <form onSubmit={formik.handleSubmit}>
-                            <input type="text" name='CategoryName' onChange={formik.handleChange} className='p-3 border-gray border rounded-lg focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500 w-full' placeholder="Tên loại sản phẩm..." />
+                            <input type="text" name='CategoryName' onChange={formik.handleChange} className='p-3 border-gray border rounded-lg focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 w-full' placeholder="Tên loại sản phẩm..." />
                             {formik.errors.CategoryName && formik.touched.CategoryName && (
                                 <p className='m-0 mt-1 text-red-600'>{formik.errors.CategoryName}</p>
                             )}

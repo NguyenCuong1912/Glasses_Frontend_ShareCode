@@ -112,21 +112,21 @@ export default function AddProduct() {
                             <div className='my-4'>
                                 <div>Tên sản phẩm:</div>
                                 <input type='text' name='ProductName'
-                                    onChange={formik.handleChange} className='p-2 px-4 border w-2/3 rounded drop-shadow-lg hover:border-blue-400 focus:outline-none focus:border focus:border-blue-400' placeholder='Tên sản phẩm...' />
+                                    onChange={formik.handleChange} className='p-2 px-4 border w-2/3 rounded drop-shadow-lg hover:border-teal-500 focus:outline-none focus:border focus:border-teal-500' placeholder='Tên sản phẩm...' />
                                 {formik.errors.ProductName && formik.touched.ProductName && (
                                     <p className='m-0 mt-1 text-red-600'>{formik.errors.ProductName}</p>
                                 )}
                             </div>
                             <div className='my-4'>
                                 <div>Giá tiền:</div>
-                                <input type='number' name='Price' onChange={formik.handleChange} className='p-2 px-4 border w-2/3 rounded drop-shadow-lg hover:border-blue-400 focus:outline-none focus:border focus:border-blue-400' placeholder='Giá tiền...' />
+                                <input type='number' name='Price' onChange={formik.handleChange} className='p-2 px-4 border w-2/3 rounded drop-shadow-lg hover:border-teal-500 focus:outline-none focus:border focus:border-teal-500' placeholder='Giá tiền...' />
                                 {formik.errors.Price && formik.touched.Price && (
                                     <p className='m-0 mt-1 text-red-600'>{formik.errors.Price}</p>
                                 )}
                             </div>
                             <div className='my-4'>
                                 <div>Ưu đãi:</div>
-                                <input type='number' name='Discount' onChange={formik.handleChange} className='p-2 px-4 border w-2/3 rounded drop-shadow-lg hover:border-blue-400 focus:outline-none focus:border focus:border-blue-400' placeholder='Ưu đãi...' />
+                                <input type='number' name='Discount' onChange={formik.handleChange} className='p-2 px-4 border w-2/3 rounded drop-shadow-lg hover:border-teal-500 focus:outline-none focus:border focus:border-teal-500' placeholder='Ưu đãi...' />
                                 {formik.errors.Discount && formik.touched.Discount && (
                                     <p className='m-0 mt-1 text-red-600'>{formik.errors.Discount}</p>
                                 )}
